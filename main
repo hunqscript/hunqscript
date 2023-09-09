@@ -9,7 +9,7 @@ local Tab = Window:MakeTab({
 })
 
 Tab:AddButton({
-	Name = "Inf Geli",
+	Name = "Auto Farm Coin",
 	Callback = function()
       		local coinHolderFolder = game:GetService("Workspace"):WaitForChild("CoinHolder")
 
