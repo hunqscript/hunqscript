@@ -1,15 +1,14 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-local Window = OrionLib:MakeWindow({Name = "sus", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "mm2 fake"})
 
 local Tab = Window:MakeTab({
-	Name = "Main",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
+  Name = "Main",
+  Icon = "rbxassetid://4483345998"
 })
 
 Tab:AddButton({
-	Name = "Auto Farm Coin",
+	Name = "farm coin",
 	Callback = function()
       		local coinHolderFolder = game:GetService("Workspace"):WaitForChild("CoinHolder")
 
@@ -20,10 +19,7 @@ while true do
             if coinPart then
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = coinPart.CFrame
                 wait(0.5)
-            end
-        end
-    end
-end
+  	end
 })
 
 OrionLib:Init()
