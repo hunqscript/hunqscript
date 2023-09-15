@@ -1,160 +1,29 @@
-local lib = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/Vape.txt")()
-
-local win = lib:Window("Nuke Simulator",Color3.fromRGB(44, 120, 224), Enum.KeyCode.RightControl)
-
-local tab = win:Tab("Auto farm")
-
-
-tab:Button("Auto Farm", function()
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.AutoFarmService.RE.ToggleAutoFarm:FireServer(true)
-lib:Notification("Notification", "Auto Farm as been enabled Press OK to continue", "OK")
-end)
-
-
-
-tab:Button("Disable auto farm", function()
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.AutoFarmService.RE.ToggleAutoFarm:FireServer(false)
-lib:Notification("Notification", "Auto farm has been disabled Press OK to continue", "OK")
-end)
-
-
-tab:Toggle("Equip best",false, function(t)
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.NukeService.RE.EquipBest:FireServer()
-print(t)
-end)
-
-
-
-
-
-tab:Button("Claim Chest/normal chest", function()
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.ChestService.RE.Claim:FireServer("NormalChest")
-lib:Notification("Notification", "chest has been cleaned Press OK to continue", "OK")
-end)
-
-tab:Label("Note: Claims Normal chest")
-
-
-
-local tab = win:Tab("Teleport")
-
-tab:Label("Note: dont buy teleport with gems")
-
-
-
-tab:Button("Nuke shop", function()
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.TeleporterService.RF.TeleportTo:InvokeServer("Nuke Shop")
-lib:Notification("Notification", "Press OK to continue", "OK")
-end)
-
-
-tab:Button("City", function()
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.TeleporterService.RF.TeleportTo:InvokeServer("City")
-lib:Notification("Notification", "Press OK to continue", "OK")
-end)
-
-tab:Button("Jungle", function()
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.TeleporterService.RF.TeleportTo:InvokeServer("Jungle")
-lib:Notification("Notification", "Press OK to continue", "OK")
-end)
-
-
-
-tab:Button("Desert", function()
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.TeleporterService.RF.TeleportTo:InvokeServer("Desert")
-lib:Notification("Notification", "Press OK to continue", "OK")
-end)
-
-
-tab:Button("Beach", function()
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.TeleporterService.RF.TeleportTo:InvokeServer("Beach")
-lib:Notification("Notification", "Press OK to continue", "OK")
-end)
-
-
-tab:Button("Site Deep Blue", function()
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.TeleporterService.RF.TeleportTo:InvokeServer("Site Deep Blue")
-lib:Notification("Notification", "Press OK to continue", "OK")
-end)
-
-
-tab:Button("Test Lab 33", function()
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.TeleporterService.RF.TeleportTo:InvokeServer("Test Lab 33")
-lib:Notification("Notification", "Press OK to continue", "OK")
-end)
-
-
-tab:Button("Volcano HQ", function()
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.TeleporterService.RF.TeleportTo:InvokeServer("Volcano HQ")
-lib:Notification("Notification", "Press OK to continue", "OK")
-end)
-
-
-tab:Button("Moon Base", function()
-game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.4.7"].knit.Services.TeleporterService.RF.TeleportTo:InvokeServer("Moon Base")
-lib:Notification("Notification", "Press OK to continue", "OK")
-end)
-
-
-
-local tab = win:Tab("Player")
-
-
-tab:Button("Speed", function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/LouieExps/speed/main/speed%20control"))();
-lib:Notification("Notification", "speed control", "OK")
-end)
-
-tab:Label("Note: may take a few clicks")
-
-tab:Button("Headless&Korblox", function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/LouieExps/headless/main/korblox%20and%20headless?token=GHSAT0AAAAAAB5XRRYAUJAWIMWBHVF6QYIAY647PKA"))();
-lib:Notification("Notification", "Hoes away when reseting", "OK")
-end)
-
-tab:Label("Note: Both client sided.")
-
-
-tab:Button("Headles&Korblox Prem", function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/LouieExps/headless/main/Korblox?token=GHSAT0AAAAAAB5XRRYBA4IIEY5DFM6O7KCOY647U3Q"))();
-lib:Notification("Notification", "dosent remove headless and korblox when resteting", "OK")
-end)
-
-
-
-
-
-
-local tab = win:Tab("Server")
-
-
-tab:Button("Rejoin", function()
-game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
-lib:Notification("Notification", "", "OK")
-end)
-
-
-
-
-
-
-
-
-
-local tab = win:Tab("Credits")
-
-tab:Label("Made by LouieExploits#4126")
-
-
-
-
-
-
-
-local changeclr = win:Tab("Change UI Color")
-
-changeclr:Colorpicker("Change UI Color",Color3.fromRGB(44, 120, 224), function(t)
-lib:ChangePresetColor(Color3.fromRGB(t.R * 255, t.G * 255, t.B * 255))
-end)
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "dank murderer 2", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
  
+local MainTab = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
 
+MainTab:AddToggle({
+	Name = "Farm Coin",
+	Default = false,
+	Callback = function(Value)
+        local coinHolderFolder = game:GetService("Workspace"):WaitForChild("CoinHolder")
+
+while true do
+    for _, coinModel in pairs(coinHolderFolder:GetChildren()) do
+        if coinModel:IsA("Model") then
+            local coinPart = coinModel:FindFirstChildWhichIsA("BasePart")
+            if coinPart then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = coinPart.CFrame
+                wait(0.5)
+            end
+        end
+    end
+ end
+})
+
+OrionLib:Init()
