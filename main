@@ -1,0 +1,4 @@
+if game.PlaceId == 9421227126 then
+
+print"Loaded The Dank Of Muderer 2"
+loadstring(game:HttpGet('https://raw.githubusercontent.com/hunqscript/hunqscript/main/TheDankOfMurderer2'))()
