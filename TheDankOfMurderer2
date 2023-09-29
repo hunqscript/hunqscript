@@ -23,4 +23,13 @@ game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("OpenCr
 	end    
 })
 
+
+hatchTab:AddToggle({
+	Name = "Auto Farm Coins",
+	Default = false,
+	Callback = function(Value)
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/hunqscript/hunqscript/main/TheDankOfMurderer2AutoFarmCoins'))()
+})
+
+
 end
