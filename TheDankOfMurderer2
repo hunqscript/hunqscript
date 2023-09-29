@@ -5,15 +5,6 @@ local Window = OrionLib:MakeWindow({Name = "Dank Murderer 2", HidePremium = fals
 
 _G.hatch = true
 
-function hatch()
-       while _G.hatch == true do
-       local args = {
-    [1] = "Amethyst Crate"
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("OpenCrate"):FireServer(unpack(args))
-     end
-end
 
 local hatchTab = Window:MakeTab({
 	Name = "Main 🏠",
@@ -26,8 +17,11 @@ hatchTab:AddToggle({
 	Name = "Open Amethys Create",
 	Default = false,
 	Callback = function(Value)
-		_G.hatch = Value
-        hatch()
+		local args = {
+    [1] = "Amethyst Crate"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("OpenCrate"):FireServer(unpack(args))
 	end    
 })
 
