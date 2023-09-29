@@ -1,0 +1,13 @@
+local coinHolderFolder = game:GetService("Workspace"):WaitForChild("CoinHolder")
+
+while true do
+    for _, coinModel in pairs(coinHolderFolder:GetChildren()) do
+        if coinModel:IsA("Model") then
+            local coinPart = coinModel:FindFirstChildWhichIsA("BasePart")
+            if coinPart then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = coinPart.CFrame
+                wait(1)
+            end
+        end
+    end
+end
