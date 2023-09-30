@@ -32,4 +32,13 @@ hatchTab:AddToggle({
 	end    
 })
 
+
+Tab:AddButton({
+	Name = "Load Auto Farm Coins Script (Can't Stop)",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/hunqscript/hunqscript/main/TheDankOfMurderer2AutoFarmCoins'))()
+  	end    
+})
+
+
 end
