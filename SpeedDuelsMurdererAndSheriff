@@ -1,0 +1,36 @@
+if game.PlaceId == 14705020018 then
+ 
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Speed Duels MM2", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+_G.hatch = true
+
+function hatch()
+       while _G.hatch == true do
+       local args = {
+    [1] = "Jungle Crate",
+    [2] = 1
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("PurchaseEgg"):InvokeServer(unpack(args))
+wait(1)
+     end
+end
+
+local hatchTab = Window:MakeTab({
+	Name = "Auto Hatch",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+hatchTab:AddToggle({
+	Name = "Auto Hatch",
+	Default = false,
+	Callback = function(Value)
+		_G.hatch = Value
+        hatch()
+	end    
+})
+
+end
