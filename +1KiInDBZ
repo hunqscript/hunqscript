@@ -1,0 +1,37 @@
+if game.PlaceId == 12524383962 then
+ 
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "+1 Ki In DBZ", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+_G.hatch = true
+
+function hatch()
+       while _G.hatch == true do
+       local args = {
+    [1] = "draw001",
+    [2] = 3
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Player"):WaitForChild("Draw"):WaitForChild("DrawRequest"):FireServer(unpack(args))
+
+      wait(0.5)
+     end
+end
+
+local hatchTab = Window:MakeTab({
+	Name = "Auto Hatch Cheapest Egg",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+hatchTab:AddToggle({
+	Name = "Auto Hatch",
+	Default = false,
+	Callback = function(Value)
+		_G.hatch = Value
+        hatch()
+	end    
+})
+
+end
