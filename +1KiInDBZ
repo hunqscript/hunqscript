@@ -1,7 +1,7 @@
 if game.PlaceId == 12524383962 then
  
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "+1 Ki In DBZ", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "+1 Ki In DBZ", HidePremium = false, SaveConfig = false, ConfigFolder = "OrionTest"})
 
 _G.hatch = true
 
