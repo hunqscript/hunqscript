@@ -19,14 +19,14 @@ game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Player
 end
 
 local hatchTab = Window:MakeTab({
-	Name = "Auto Hatch Cheapest Egg",
+	Name = "Main",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
 
 hatchTab:AddToggle({
-	Name = "Auto Hatch",
+	Name = "Auto Hatch Cheapest Egg",
 	Default = false,
 	Callback = function(Value)
 		_G.hatch = Value
