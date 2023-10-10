@@ -14,7 +14,7 @@ function hatch()
 
 game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Player"):WaitForChild("Draw"):WaitForChild("DrawRequest"):FireServer(unpack(args))
 
-      wait(0.5)
+      wait(0.2)
      end
 end
 
