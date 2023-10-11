@@ -3,10 +3,10 @@ if game.PlaceId == 7577630194 then
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Apple Clicker", HidePremium = false, IntroText = "hunqscript", SaveConfig = false, ConfigFolder = "OrionTest"})
 
-_G.click = true
+_G.hatch = true
 
-function click()
-       while _G.click == true do
+function hatch()
+       while _G.hatch == true do
        local args = {
     [1] = "Click"
 }
@@ -24,12 +24,12 @@ local hatchTab = Window:MakeTab({
 })
 
 
-nameTab:AddToggle({
+hatchTab:AddToggle({
 	Name = "Auto Click",
 	Default = false,
 	Callback = function(Value)
-		_G.click = Value
-        click()
+		_G.hatch = Value
+        hatch()
 	end    
 })
 
