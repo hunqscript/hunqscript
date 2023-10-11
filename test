@@ -7,13 +7,7 @@ _G.name = true
 
 function name()
        while _G.name == true do
-       local args = {
-    [1] = "draw001",
-    [2] = 3
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Player"):WaitForChild("Draw"):WaitForChild("DrawRequest"):FireServer(unpack(args))
-
+       
       wait(0.2)
      end
 end
@@ -25,12 +19,12 @@ local hatchTab = Window:MakeTab({
 })
 
 
-hatchTab:AddToggle({
-	Name = "Auto Hatch Cheapest Egg",
+nameTab:AddToggle({
+	Name = "",
 	Default = false,
 	Callback = function(Value)
-		_G.hatch = Value
-        hatch()
+		_G.name = Value
+        name()
 	end    
 })
 
