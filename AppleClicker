@@ -1,0 +1,37 @@
+if game.PlaceId == 7577630194 then
+ 
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Apple Clicker", HidePremium = false, IntroText = "hunqscript", SaveConfig = false, ConfigFolder = "OrionTest"})
+
+_G.click = true
+
+function click()
+       while _G.click == true do
+       local args = {
+    [1] = "Click"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("ClickedRE"):FireServer(unpack(args))
+
+      wait(0.001)
+     end
+end
+
+local hatchTab = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+nameTab:AddToggle({
+	Name = "Auto Click",
+	Default = false,
+	Callback = function(Value)
+		_G.click = Value
+        click()
+	end    
+})
+
+
+end
