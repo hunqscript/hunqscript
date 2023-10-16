@@ -31,4 +31,4 @@ humanoidRootPart.CFrame = CFrame.new(-614.9990234375, 64.427978515625, 357.00439
 wait(0)
 humanoidRootPart.CFrame = CFrame.new(85.4444351, 107.272911, -696.165833, 0, 0, 1, 0, 1, -0, -1, 0, 0)
 
-end
+wait(0.5)
