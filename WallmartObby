@@ -1,0 +1,54 @@
+local character = game.Players.LocalPlayer.Character
+local humanoidRootPart = character:FindFirstChild("HumanoidRootPart")
+
+wait(0)
+humanoidRootPart.CFrame = CFrame.new(-224.38772583007812, 49.88017272949219, 243.6373291015625)
+
+wait(0)
+humanoidRootPart.CFrame = CFrame.new(-396.7164306640625, 62.002357482910156, 145.191162109375)
+
+wait(0)
+humanoidRootPart.CFrame = CFrame.new(-336.1651306152344, 132.04327392578125, 1032.248291015625)
+
+wait(0)
+humanoidRootPart.CFrame = CFrame.new(-54.940826416015625, 135.75294494628906, 813.78466796875)
+
+wait(0)
+humanoidRootPart.CFrame = CFrame.new(-347.6586608886719, 90.4566879272461, 842.8529052734375)
+
+wait(0)
+humanoidRootPart.CFrame = CFrame.new(-522.0221557617188, -103.45674896240234, 753.5885009765625)
+
+wait(0)
+humanoidRootPart.CFrame = CFrame.new(-120.7470703125, 136.41433715820312, -1759.00537109375)
+
+wait(0)
+humanoidRootPart.CFrame = CFrame.new(-756.9457397460938, -24.01173210144043, -1773.759033203125)
+
+wait(0)
+humanoidRootPart.CFrame = CFrame.new(-614.9990234375, 64.427978515625, 357.00439453125)
+
+wait(0)
+humanoidRootPart.CFrame = CFrame.new(85.4444351, 107.272911, -696.165833, 0, 0, 1, 0, 1, -0, -1, 0, 0)
+
+wait(0.5)
+
+wait(0.5)local ba=Instance.new("ScreenGui")
+local ca=Instance.new("TextLabel")local da=Instance.new("Frame")
+local _b=Instance.new("TextLabel")local ab=Instance.new("TextLabel")ba.Parent=game.CoreGui
+ba.ZIndexBehavior=Enum.ZIndexBehavior.Sibling;ca.Parent=ba;ca.Active=true
+ca.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)ca.Draggable=true
+ca.Position=UDim2.new(0.698610067,0,0.098096624,0)ca.Size=UDim2.new(0,370,0,52)
+ca.Font=Enum.Font.SourceSansSemibold;ca.Text="Anti AFK Script"ca.TextColor3=Color3.new(0,1,1)
+ca.TextSize=22;da.Parent=ca
+da.BackgroundColor3=Color3.new(0.196078,0.196078,0.196078)da.Position=UDim2.new(0,0,1.0192306,0)
+da.Size=UDim2.new(0,370,0,107)_b.Parent=da
+_b.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)_b.Position=UDim2.new(0,0,0.800455689,0)
+_b.Size=UDim2.new(0,370,0,21)_b.Font=Enum.Font.Arial;_b.Text="we live, we love, we lie"
+_b.TextColor3=Color3.new(0,1,1)_b.TextSize=20;ab.Parent=da
+ab.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)ab.Position=UDim2.new(0,0,0.158377,0)
+ab.Size=UDim2.new(0,370,0,44)ab.Font=Enum.Font.ArialBold;ab.Text="Status: Active"
+ab.TextColor3=Color3.new(0,1,1)ab.TextSize=20;local bb=game:service'VirtualUser'
+game:service'Players'.LocalPlayer.Idled:connect(function()
+bb:CaptureController()bb:ClickButton2(Vector2.new())
+ab.Text="Roblox tried to kick u but i kicked him instead"wait(2)ab.Text="Status : Active"end)
