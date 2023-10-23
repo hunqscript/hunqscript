@@ -12,7 +12,7 @@ function hatch()
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("OpenCrate"):FireServer(unpack(args))
-      wait(0.5)
+      wait(0.001)
      end
 end
 
