@@ -1,1 +1,36 @@
-do local a=[[77fuscator 0.5.0 - discord.gg/CEHsVcBcuf]];return(function(b,c,d,e,f,f,g,h,i,j,k,l,l,m,n,o,p,q,r,s,t,u,u,v,w,w,x,y,y,z,z,z,ba,ba,bb,bb,bb,bc)local bd,be,bf,bg,bh,bi,bj,bk,bl,bm,bn,bo,bp,bq,br,bs,bt,bu,bv,bw,bx,by,bz,ca,cb,cc,cd,ce,cf,cg,ch,ci,cj,ck,cl,cm,cn,co,cp,cq,cr=0 while true do if bd<=17 then if bd<=8 then if bd<=3 then if bd<=1 then if bd==0 then be,bf,bg,bh,bi,bj,bk=string.sub,table.concat,string.char,tonumber,next,(((table.create or function(cs,ct)local cu={};for cv=1,cs do cu[cv]=ct;end;return cu;end))or tostring)else bl=1 end else if 3>bd then bm=function(bi)local bk,cs,ct,cu,cv,cw,cx,cy=0 while true do if bk<=5 then if bk<=2 then if bk<=0 then cs,ct=g,g else if bk>1 then cv=256 else cu=bj(#bi)end end else if bk<=3 then cw=bj(cv)else if bk<5 then for bj=0,(cv-1)do cw[bj]=bg(bj)end else cx=1 end end end else if bk<=8 then if bk<=6 then cy=function()local bj,cz,da=0 while true do if bj<=2 then if bj<=0 then cz=bh(be(bi,cx,cx),36)else if 1<bj then da=bh(be(bi,cx,cx+cz-1),36)else cx=cx+1 end end else if bj<=3 then cx=cx+cz else if bj~=5 then return da else break end end end bj=bj+1 end end else if bk~=8 then cs=bg(cy())else cu[1]=cs end end else if bk<=9 then while cx<#bi and#a==d do local a=cy()if cw[a]then ct=cw[a]else ct=cs..be(cs,1,1)end cw[cv]=(cs..be(ct,1,1))cu[#cu+1],cs,cv=ct,ct,(cv+1)end else if bk>10 then break else return bf(cu)end end end end bk=bk+1 end end else bn=bm(b)end end else if bd<=5 then if 4<bd then c={l,w,o,j,s,i,u,k,m,q,x,y,nil};else bo={}end else if bd<=6 then bp=v else if 8~=bd then bq=bp(bo)else br,bs=1,(((-4266+(function()local a,b,c,d=0 while true do if a<=1 then if a~=1 then b,c=0,1 else d=(function(k,q)local s=0 while true do if 1>s then q(q(k,k),(k(k,k)and q((q and k),q)))else break end s=s+1 end end)(function(k,q)local s=0 while true do if s<=2 then if s<=0 then if(b>273)then return k end else if s>1 then c=((c+388)%49762)else b=(b+1)end end else if s<=3 then if((c%366)<183)then return q(q(q,q),k(q,q))else return q end else if s>4 then break else return k end end end s=s+1 end end,function(k,q)local s=0 while true do if s<=2 then if s<
+if game.PlaceId == 9421227126 then
+ 
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "The Dank Murderer 2", HidePremium = false, IntroText = "hunqscript", SaveConfig = false, ConfigFolder = "OrionTest"})
+
+_G.hatch = true
+
+function hatch()
+       while _G.hatch == true do
+       local args = {
+    [1] = "Halloween 23 Crate"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("OpenCrate"):FireServer(unpack(args))
+      wait(0.5)
+     end
+end
+
+local hatchTab = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+hatchTab:AddToggle({
+	Name = "Auto Halloween 23 Create",
+	Default = false,
+	Callback = function(Value)
+		_G.hatch = Value
+        hatch()
+	end    
+})
+
+
+end
