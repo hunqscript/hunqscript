@@ -1,86 +1,10 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Cat Hub", HidePremium = false, IntroText = "Cat Hub", SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "Title of the library", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
-_G.dice = true
-
-function hatch()
-       while _G.dice == true do
-       local args = {
-    [1] = "Auto Buy Dice"
-}
-
-local args = {
-    [1] = "LuckyDiceMerchant",
-    [2] = 1
-}
-      wait(0.001)
-     end
-end
-game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Merchant_RequestPurchase"):InvokeServer(unpack(args))
-
-local args = {
-    [1] = "LuckyDiceMerchant",
-    [2] = 2
-}
-      wait(0.001)
-     end
-end
-game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Merchant_RequestPurchase"):InvokeServer(unpack(args))
-
-local args = {
-    [1] = "LuckyDiceMerchant",
-    [2] = 3
-}
-      wait(0.001)
-     end
-end
-game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Merchant_RequestPurchase"):InvokeServer(unpack(args))
-
-local args = {
-    [1] = "LuckyDiceMerchant",
-    [2] = 4
-}
-      wait(0.001)
-     end
-end
-game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Merchant_RequestPurchase"):InvokeServer(unpack(args))
-
-local args = {
-    [1] = "LuckyDiceMerchant",
-    [2] = 5
-}
-      wait(0.001)
-     end
-end
-game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Merchant_RequestPurchase"):InvokeServer(unpack(args))
-
-local args = {
-    [1] = "LuckyDiceMerchant",
-    [2] = 6
-}
-      wait(0.001)
-     end
-end
-game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Merchant_RequestPurchase"):InvokeServer(unpack(args))
-      wait(0.001)
-     end
-end
-
-local hatchTab = Window:MakeTab({
+local Tab = Window:MakeTab({
 	Name = "Main",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
-
-hatchTab:AddToggle({
-	Name = "Auto Dice",
-	Default = false,
-	Callback = function(Value)
-		_G.dice = Value
-        hatch()
-	end    
-})
-
-
-end
+OrionLib:Init()
