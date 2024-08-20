@@ -1,6 +1,8 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Cat HUB", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
+_G.hatch = true
+
 local Tab = Window:MakeTab({
 	Name = "Main",
 	Icon = "rbxassetid://4483345998",
@@ -14,4 +16,41 @@ Tab:AddToggle({
 	end    
 })
 
+function hatch()
+       while _G.hatch == true do
+       local args = {
+    [1] = "Auto Buy Dice"
+}
+
+game:GetService("ReplicatedStorage").Network.Merchant_RequestPurchase:InvokeServer(unpack(args))      
+            local args = {
+                [1] = "LuckyDiceMerchant",
+                [2] = 1
+            }
+game:GetService("ReplicatedStorage").Network.Merchant_RequestPurchase:InvokeServer(unpack(args))      
+            local args = {
+                [1] = "LuckyDiceMerchant",
+                [2] = 2
+            }
+game:GetService("ReplicatedStorage").Network.Merchant_RequestPurchase:InvokeServer(unpack(args))      
+            local args = {
+                [1] = "LuckyDiceMerchant",
+                [2] = 3
+            }
+game:GetService("ReplicatedStorage").Network.Merchant_RequestPurchase:InvokeServer(unpack(args))      
+            local args = {
+                [1] = "LuckyDiceMerchant",
+                [2] = 4
+            }
+game:GetService("ReplicatedStorage").Network.Merchant_RequestPurchase:InvokeServer(unpack(args))      
+            local args = {
+                [1] = "LuckyDiceMerchant",
+                [2] = 5
+            }
+game:GetService("ReplicatedStorage").Network.Merchant_RequestPurchase:InvokeServer(unpack(args))      
+            local args = {
+                [1] = "LuckyDiceMerchant",
+                [2] = 6
+            }
+                                                                        
 OrionLib:Init()
