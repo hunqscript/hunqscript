@@ -3,7 +3,6 @@ local Window = OrionLib:MakeWindow({Name = "Cat HUB", HidePremium = false, SaveC
 
 _G.autoBuy = true
 
-Tab:AddToggle({
     function autoBuy()
         while _G.autoBuy == true do
             local args = {
@@ -39,49 +38,13 @@ Tab:AddToggle({
         end
     end
 
-function autoCraft()
-    while _G.autoCraft == true do
-        local args = {
-            [1] = "Lucky Dice II",
-            [2] = 1
-        }
-        game:GetService("ReplicatedStorage").Network.LuckyDice_Craft:InvokeServer(unpack(args))
-        game:GetService("ReplicatedStorage").Network["Index: Request Hatch Count"]:InvokeServer()
-         end
-    end
 
-function autoCraft2()
-    while _G.autoCraft2 == true do
-        local args = {
-            [1] = "Mega Lucky Dice",
-            [2] = 1
-        }
-        game:GetService("ReplicatedStorage").Network.LuckyDice_Craft:InvokeServer(unpack(args))
-        game:GetService("ReplicatedStorage").Network["Index: Request Hatch Count"]:InvokeServer()
-         end
-    end
-
-function autoCraft3()
-    while _G.autoCraft3 == true do
-        local args = {
-            [1] = "Mega Lucky Dice II",
-            [2] = 1
-        }
-        game:GetService("ReplicatedStorage").Network.LuckyDice_Craft:InvokeServer(unpack(args))
-        game:GetService("ReplicatedStorage").Network["Index: Request Hatch Count"]:InvokeServer()
-             end
-        end
-
--- Tab
-local BuyTab = Window:MakeTab({
-	Name = "AutoBuy",
+local CraftTab = Window:MakeTab({
+	Name = "Main",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
-})
-
--- Toggles
 BuyTab:AddToggle({
 	Name = "Auto Buy",
 	Default = false,
@@ -90,5 +53,6 @@ BuyTab:AddToggle({
 	    autoBuy()
 	end    
 })
-                                                                        
+
+
 OrionLib:Init()
