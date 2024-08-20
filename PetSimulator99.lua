@@ -1,5 +1,6 @@
+if game.PlaceId == 8737899170 then
     local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-    local Window = OrionLib:MakeWindow({Name = "IbaFort Hub", HidePremium = false, IntroEnable = false,IntroText = "IbaFort Hub", SaveConfig = true, ConfigFolder = "IbafortConfig"})
+    local Window = OrionLib:MakeWindow({Name = "Cat Hub🐱", HidePremium = false, IntroEnable = false,IntroText = "Cat Hub", SaveConfig = true, ConfigFolder = "IbafortConfig"})
 
     -- Values
     _G.autoBuy = true
@@ -78,13 +79,13 @@ function autoCraft3()
 
 -- Tab
 local BuyTab = Window:MakeTab({
-	Name = "AutoBuy",
+	Name = "Auto Buy",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
 local CraftTab = Window:MakeTab({
-	Name = "AutoCraft",
+	Name = "Auto Craft",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
