@@ -3,19 +3,7 @@ local Window = OrionLib:MakeWindow({Name = "Cat HUB", HidePremium = false, SaveC
 
 _G.autoBuy = true
 
-local Tab = Window:MakeTab({
-	Name = "Main",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
 Tab:AddToggle({
-	Name = "Auto Buy Dice",
-	Default = false,
-	Callback = function(Value)
-		print(Value)
-	end    
-})
-
     function autoBuy()
         while _G.autoBuy == true do
             local args = {
@@ -91,10 +79,6 @@ local BuyTab = Window:MakeTab({
 	PremiumOnly = false
 })
 
-local CraftTab = Window:MakeTab({
-	Name = "AutoCraft",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
 })
 
 -- Toggles
