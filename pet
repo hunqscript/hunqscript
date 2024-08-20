@@ -1,7 +1,7 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Cat HUB", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
-_G.hatch = true
+_G.autoBuy = true
 
 local Tab = Window:MakeTab({
 	Name = "Main",
@@ -16,41 +16,95 @@ Tab:AddToggle({
 	end    
 })
 
-function hatch()
-       while _G.hatch == true do
-       local args = {
-    [1] = "Auto Buy Dice"
-}
-
-game:GetService("ReplicatedStorage").Network.Merchant_RequestPurchase:InvokeServer(unpack(args))      
+    function autoBuy()
+        while _G.autoBuy == true do
             local args = {
                 [1] = "LuckyDiceMerchant",
                 [2] = 1
             }
-game:GetService("ReplicatedStorage").Network.Merchant_RequestPurchase:InvokeServer(unpack(args))      
+            game:GetService("ReplicatedStorage").Network.Merchant_RequestPurchase:InvokeServer(unpack(args))      
             local args = {
                 [1] = "LuckyDiceMerchant",
                 [2] = 2
             }
-game:GetService("ReplicatedStorage").Network.Merchant_RequestPurchase:InvokeServer(unpack(args))      
+            game:GetService("ReplicatedStorage").Network.Merchant_RequestPurchase:InvokeServer(unpack(args))    
             local args = {
                 [1] = "LuckyDiceMerchant",
                 [2] = 3
             }
-game:GetService("ReplicatedStorage").Network.Merchant_RequestPurchase:InvokeServer(unpack(args))      
+            game:GetService("ReplicatedStorage").Network.Merchant_RequestPurchase:InvokeServer(unpack(args))    
             local args = {
                 [1] = "LuckyDiceMerchant",
                 [2] = 4
             }
-game:GetService("ReplicatedStorage").Network.Merchant_RequestPurchase:InvokeServer(unpack(args))      
+            game:GetService("ReplicatedStorage").Network.Merchant_RequestPurchase:InvokeServer(unpack(args))  
             local args = {
                 [1] = "LuckyDiceMerchant",
                 [2] = 5
             }
-game:GetService("ReplicatedStorage").Network.Merchant_RequestPurchase:InvokeServer(unpack(args))      
+            game:GetService("ReplicatedStorage").Network.Merchant_RequestPurchase:InvokeServer(unpack(args))  
             local args = {
                 [1] = "LuckyDiceMerchant",
                 [2] = 6
             }
+            game:GetService("ReplicatedStorage").Network.Merchant_RequestPurchase:InvokeServer(unpack(args))  
+        end
+    end
+
+function autoCraft()
+    while _G.autoCraft == true do
+        local args = {
+            [1] = "Lucky Dice II",
+            [2] = 1
+        }
+        game:GetService("ReplicatedStorage").Network.LuckyDice_Craft:InvokeServer(unpack(args))
+        game:GetService("ReplicatedStorage").Network["Index: Request Hatch Count"]:InvokeServer()
+         end
+    end
+
+function autoCraft2()
+    while _G.autoCraft2 == true do
+        local args = {
+            [1] = "Mega Lucky Dice",
+            [2] = 1
+        }
+        game:GetService("ReplicatedStorage").Network.LuckyDice_Craft:InvokeServer(unpack(args))
+        game:GetService("ReplicatedStorage").Network["Index: Request Hatch Count"]:InvokeServer()
+         end
+    end
+
+function autoCraft3()
+    while _G.autoCraft3 == true do
+        local args = {
+            [1] = "Mega Lucky Dice II",
+            [2] = 1
+        }
+        game:GetService("ReplicatedStorage").Network.LuckyDice_Craft:InvokeServer(unpack(args))
+        game:GetService("ReplicatedStorage").Network["Index: Request Hatch Count"]:InvokeServer()
+             end
+        end
+
+-- Tab
+local BuyTab = Window:MakeTab({
+	Name = "AutoBuy",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local CraftTab = Window:MakeTab({
+	Name = "AutoCraft",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+-- Toggles
+BuyTab:AddToggle({
+	Name = "Auto Buy",
+	Default = false,
+	Callback = function(Value)
+	    _G.autoBuy = Value
+	    autoBuy()
+	end    
+})
                                                                         
 OrionLib:Init()
