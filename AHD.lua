@@ -6,7 +6,7 @@ local tab = DrRayLibrary.newTab("Farm", "ImageIdHere")
 
 tab.newToggle("Auto Quest 20", "Required Pyscho Class", true, function(toggleState)
     if toggleState then
-        for i = 1, 99999999 do
+        for i = 1, 99999 do
     local args = {
     [1] = "GetAscendedQuest",
     [2] = 20
@@ -69,10 +69,10 @@ local tab = DrRayLibrary.newTab("Sky Stats", "ImageIdHere")
 
 tab.newToggle("Auto Strength", "Work On Sky", true, function(toggleState)
     if toggleState then
-        for i = 1, 999999 do
+        for i = 1, 99999 do
     local args = {
     [1] = "UpgradeAuthority",
-    [2] = 1
+    [2] = 1000
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
@@ -84,10 +84,10 @@ end
 end)
 tab.newToggle("Auto Defense", "Work On Sky", true, function(toggleState)
     if toggleState then
-        for i = 1, 99999999 do
+        for i = 1, 9999 do
     local args = {
     [1] = "UpgradePresence",
-    [2] = 1
+    [2] = 1000
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
@@ -101,10 +101,10 @@ end)
 
 tab.newToggle("Auto Form", "Work On Sky", true, function(toggleState)
     if toggleState then
-        for i = 1, 999999 do
+        for i = 1, 9999 do
     local args = {
     [1] = "UpgradeGrace",
-    [2] = 1
+    [2] = 1000
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):FireServer(unpack(args))
